@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base</title>
+</head>
+
+<body>
+    <table align="center">
+        <th align="center">
+            <h1>Terrenos disponibles</h1>
+        </th>
+        {%for dato in datos%}
+        <tr>
+
+            <td>
+
+                <p> <strong>Partner: </strong>{{dato.dueño}} </p>
+                <p> <strong>Fondo: </strong>{{dato.fondo}} </p>
+                <p> <strong>Frente: </strong>{{dato.frente}} </p>
+                <p> <strong>Price: </strong>{{dato.precio}} </p>
+
+            </td>
+            <td>
+                <img src="{{dato.url_imagen}}" width="300px" height="300px">
+            </td>
+
+        </tr>
+        {%endfor%}
+    </table>
+
+</body>
+
+</html>
